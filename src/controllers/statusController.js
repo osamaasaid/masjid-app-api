@@ -2,7 +2,6 @@
 import pkg from '../../package';
 
 const env = process.env.NODE_ENV || 'development';
-const hostname = os.hostname();
 
 const get = (req, res, _next) => {
   // Check readyState of mongoose connection to fail the
