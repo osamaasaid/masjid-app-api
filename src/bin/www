@@ -9,7 +9,7 @@ require('dotenv').config({ silent: true });
  */
 
 const app = require('../app');
-const debug = require('debug')('messaging-service:server');
+const debug = require('debug')('masjid-app:server');
 const http = require('http');
 
 /**
