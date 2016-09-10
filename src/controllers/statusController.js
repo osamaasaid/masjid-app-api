@@ -1,7 +1,9 @@
-import mongoose from 'mongoose';
+import os from 'os';
+// import mongoose from 'mongoose';
 import pkg from '../../package';
 
-const env = process.env.NODE_ENV || 'qa';
+const env = process.env.NODE_ENV || 'development';
+const hostname = os.hostname();
 
 const get = (req, res, _next) => {
   // Check readyState of mongoose connection to fail the
@@ -13,7 +15,10 @@ const get = (req, res, _next) => {
   return res.status(200).json({
     name: pkg.name,
     description: pkg.description,
-    version: pkg.version
+    version: pkg.version,
+    env,
+    hostname: `${hostname}`,
+    repo: pkg.homepage
   });
 };
 
