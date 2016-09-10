@@ -1,0 +1,10 @@
+{
+  "api": {
+    "prefix": "/api/"
+  },
+  "database": {
+    "prefix": "mongodb://",
+    "host": ["localhost:27017"],
+    "name": "masjid"
+  }
+}
