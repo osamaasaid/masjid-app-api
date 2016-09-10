@@ -1,4 +1,5 @@
 // import mongoose from 'mongoose';
+import os from 'os';
 import pkg from '../../package';
 
 const env = process.env.NODE_ENV || 'development';
@@ -15,6 +16,7 @@ const get = (req, res, _next) => {
     description: pkg.description,
     version: pkg.version,
     env,
+    os: os.hostname(),
     repo: pkg.homepage
   });
 };
