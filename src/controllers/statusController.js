@@ -1,4 +1,3 @@
-import os from 'os';
 // import mongoose from 'mongoose';
 import pkg from '../../package';
 
@@ -17,7 +16,6 @@ const get = (req, res, _next) => {
     description: pkg.description,
     version: pkg.version,
     env,
-    hostname: `${hostname}`,
     repo: pkg.homepage
   });
 };
